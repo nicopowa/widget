@@ -16,7 +16,6 @@ class LeMondeWidget extends Widget {
 	async ready() {
 		super.ready();
 		SocketIO.initialize();
-		trace(this);
 		SocketIO.on("msg", this.mvc.controller.onMessage.bind(this));
 		this.mvc.controller.load();
 	}
@@ -83,6 +82,7 @@ class LeMondeController extends WidgetController {
 	
 	socketClick(event) {
 		trace("test socket");
+		trace(window.Main.widgets);
 		SocketIO.send("msg", {test: "message"});
 	}
 	

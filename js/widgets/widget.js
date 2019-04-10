@@ -50,7 +50,7 @@ class Widget extends Try {
 		super();
 		
 		this.try.name = this.constructor.name.toLowerCase().replace("widget", "");
-		trace("new widget", this.try.name);
+		//trace("new widget", this.try.name);
 		
 		this.try.id = id;
 		
